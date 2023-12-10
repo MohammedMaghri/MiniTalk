@@ -17,22 +17,42 @@ char    *ft_copy(char *string ,char *thestring)
     string[number] = '\0';
     return (string);
 }
-void Binaryconv(unsigned char AR)
+char  binaryreader(unsigned char string, int number[])
 {
-    int i = 7 ;
-    int arr[8] ;
+    int index ;
+
+    index = 7 ;
+    while (index >= 0)
+    {
+        string = (string << 1) | number[index];
+        index--; 
+    }
+    return string ;
+}
+char binaryArrayToChar(int binaryArray) {
+    char result = 0;
+    return result;
+}
+void	Binaryconv(unsigned char AR)
+{
+	int	i;
+	int	j;
+    char a;
+    char res = 0;
+	i = 7 ;
+	j = 7 ;
+	int	arr[i];
     while (i >= 0)
     {
-        ar[(AR >> i) - ]
-     
+		arr[i] = (AR >> i) & 1;
         i--;
     }
-    printf("\n");
+    for (int x = 0; x <= 7; x++) {
+        res |= arr[x] << (7 - x);
+    }
+    printf("%c" ,res);
 }
-void Convhandle(char *string)
-{
-    int i ;
-}
+
 struct Minitalk
 {
     char string[7];
@@ -41,14 +61,7 @@ struct Minitalk
 
 int main(int argc, char **argv)
 {
-    int n = 12 ;
-    printf("%d\n" , n >> 1);
-    Binaryconv('a');
-  char  numbeB = 0b01100001 ;
-    printf("%c" , numbeB);
-    struct Minitalk person;
-    ft_copy(person.string, "Thii");
-    printf("%s\n" ,person.string);
+    Binaryconv('z');
     if (argc < 2)
     {
         printf("Usage: <%d> <Message>\n", getpid());

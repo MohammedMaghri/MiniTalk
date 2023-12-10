@@ -24,6 +24,7 @@ void Binaryconv(unsigned char AR)
     while (i >= 0)
     {
         ar[(AR >> i) - ]
+     
         i--;
     }
     printf("\n");

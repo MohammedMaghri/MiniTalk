@@ -44,6 +44,7 @@ void	Binaryconv(unsigned char AR)
 	int	arr[i];
     while (i >= 0)
     {
+        
 		arr[i] = (AR >> i) & 1;
         i--;
     }

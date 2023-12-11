@@ -51,6 +51,7 @@ char *reverse(char *reverse)
     char *allocation ;
     allocation = malloc(sizeof(char) * lencount(reverse));
     total -= 1 ;
+    
     while (reverse[total])
     {
         allocation[index] = reverse[total];

@@ -33,7 +33,7 @@ char binaryArrayToChar(int binaryArray) {
     char result = 0;
     return result;
 }
-void	Binaryconv(unsigned char AR)
+char *Binaryconv(unsigned char AR)
 {
 	int	i;
 	int	j;
@@ -41,6 +41,8 @@ void	Binaryconv(unsigned char AR)
     char res = 0;
 	i = 7 ;
 	j = 7 ;
+    char *string;
+    string = malloc(sizeof(string) * 8);
 	int	arr[i];
     while (i >= 0)
     {
@@ -48,10 +50,13 @@ void	Binaryconv(unsigned char AR)
 		arr[i] = (AR >> i) & 1;
         i--;
     }
-    for (int x = 0; x <= 7; x++) {
-        res |= arr[x] << (7 - x);
+    string[8] = '\0';
+    while (j >= 0)
+    {
+        string[j] = arr[j] + '0';
+        j--;
     }
-    printf("%c" ,res);
+    return (string);
 }
 
 struct Minitalk
@@ -62,7 +67,10 @@ struct Minitalk
 
 int main(int argc, char **argv)
 {
-    Binaryconv('z');
+    Binaryconv('a');
+    char *string ;
+    string = Binaryconv('a');
+    printf("%s" , string);
     if (argc < 2)
     {
         printf("Usage: <%d> <Message>\n", getpid());

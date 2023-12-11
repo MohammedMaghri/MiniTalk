@@ -61,24 +61,33 @@ char *reverse(char *reverse)
     free(reverse);
     return allocation ;
 }
- void characterreder(char *string)
+ int characterreder(char *string)
 {
     int index ;
-    int total ;
-    int res ;
-    int number ;
-    index = 0; 
-    total -= 1;
-    res = 0 ;
-    total = lencount(string);
-    number = 0 ;
-    while (string[index])
+    int addition ;
+    int i ;
+
+    i = 0 ;
+    int division = 1; 
+    int total  = 0 ;
+    addition = 1 ;
+
+    index = lencount(string - 1);
+    
+    while (i <= index)
     {
-        
+        if (string[i] == '1')
+        {
+            total += division ;
+        }
+        division *= 2 ;
+        i++;
     }
+    return total ;
 }
 
 int main()
 {
-    characterreder("0000 0000");
+    int number =  characterreder("10100111");
+    printf("%d" , number);
 }

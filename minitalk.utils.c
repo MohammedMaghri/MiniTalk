@@ -88,6 +88,6 @@ char *reverse(char *reverse)
 
 int main()
 {
-    int number =  characterreder("10100111");
+    int number =  characterreder("0111");
     printf("%d" , number);
 }

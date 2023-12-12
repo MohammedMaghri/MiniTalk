@@ -88,27 +88,39 @@ char *reverse(char *reverse)
     return total ;
 }
 void binary_to_ascii(const char *binary_str) {
+    
     int len = strlen(binary_str);
-    int i, j, decimal;
-    i = 0 ;
-    j = 0 ;  
+    int i = 0;
+    int decimal ;
+    
     while (i < len) {
         decimal = 0;
-        while  (j < 8) 
-        {
+        int j = 0;
+        while (j < 8) {
             decimal = decimal * 2 + (binary_str[i + j] - '0');
-            j++ ;
+            j++;
         }
-        i += 8 ;
-        
-        printf("%d", decimal);
+
+        printf("%c", decimal);
+        i += 8;
     }
-    printf("\n");
 }
+void pasteevrything(char *string)
+{
+    int index = 0 ;
+    char *res ;
+    while (string[index] != '\0')
+    {
+        res = binaryconv(string[index]);
+        res = reverse(res);
+        binary_to_ascii(res);
+        free(res);
+        index++ ;
+    }
+}   
+int main()
+{ 
+    char *strinf = "01100001" ;
+   pasteevrything(strinf);
 
-int main() { 
-    const char *binary_string = "01100001" ;
-    binary_to_ascii(binary_string);
-
-    return 0;
 }

@@ -7,6 +7,7 @@ char    *ft_copy(char *string ,char *thestring)
 {
     int number ;
 
+
     number = 0 ;
 
     while (thestring[number])

@@ -7,7 +7,8 @@ char *binaryconv(unsigned char AR)
 {
 	int	i;
 	int	j;
-    char a;
+ 
+ 	char a;
     char res = 0;
 	i = 7 ;
 	j = 7 ;

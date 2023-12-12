@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 char *binaryconv(unsigned char AR)
 {
@@ -86,9 +87,28 @@ char *reverse(char *reverse)
     }
     return total ;
 }
+void binary_to_ascii(const char *binary_str) {
+    int len = strlen(binary_str);
+    int i, j, decimal;
+    i = 0 ;
+    j = 0 ;  
+    while (i < len) {
+        decimal = 0;
+        while  (j < 8) 
+        {
+            decimal = decimal * 2 + (binary_str[i + j] - '0');
+            j++ ;
+        }
+        i += 8 ;
+        
+        printf("%d", decimal);
+    }
+    printf("\n");
+}
 
-int main()
-{
-    int number =  characterreder("0111");
-    printf("%d" , number);
+int main() { 
+    const char *binary_string = "01100001" ;
+    binary_to_ascii(binary_string);
+
+    return 0;
 }

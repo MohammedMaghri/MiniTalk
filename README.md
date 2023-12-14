@@ -14,3 +14,4 @@ This project is all about Creating a Communication program in the Form of a clie
           UNIX signals.
       • You can only use these two signals: SIGUSR1 and SIGUSR2  
 <img width="2337" alt="Screen Shot 2023-12-13 at 1 30 41 PM" src="https://github.com/MohammedMaghri/MiniTalk/assets/135870538/040e4096-cc3c-4897-a148-622ae5c6d796">
+<img width="2337" alt="Screen Shot 2023-12-14 at 8 11 49 PM" src="https://github.com/MohammedMaghri/MiniTalk/assets/135870538/b979b943-c2f4-4564-b96c-12be068ec47a">
